@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="pragma" content="no-cache">
+    {%  load static %}
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css.map' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-theme.css.map' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-theme.css' %}" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <a href="{% url 'main' %}" class="navbar-brand">Somefun</a>
+    </nav>
+
+    {%  block body %}Переопределяется в наследниках{% endblock %}
+    <hr>
+    <footer>
+       <p>&copy; BMSTU Orelikov Mike 2016</p>
+    </footer>
+</body>
+</html>
